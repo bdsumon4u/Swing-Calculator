@@ -11,6 +11,18 @@ public class MainController {
         this.model = model;
         this.view = view;
 
-        System.out.println("MainController");
+        bindButtons();
+        view.addKeyListener(new KeyController(this));
+    }
+
+    private void bindButtons() {
+        for (int i = 0; i < view.numButtons().size(); i++) {
+            final int buttonID = i;
+            view.numButtons().get(i).addActionListener(e -> pressNum(buttonID));
+        }
+    }
+
+    protected void pressNum(int num) {
+        System.out.println("Pressed " + num);
     }
 }

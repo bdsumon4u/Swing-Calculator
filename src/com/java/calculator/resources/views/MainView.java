@@ -1,6 +1,9 @@
 package com.java.calculator.resources.views;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 final public class MainView extends JFrame {
     private JPanel mainPanel;
@@ -42,5 +45,12 @@ final public class MainView extends JFrame {
         setResizable(false);
         setFocusable(true);
         setVisible(true);
+    }
+
+    public List<JButton> numButtons() {
+        return Arrays.asList(
+                a0Button, a1Button, a2Button, a3Button, a4Button,
+                a5Button, a6Button, a7Button, a8Button, a9Button
+        );
     }
 }
