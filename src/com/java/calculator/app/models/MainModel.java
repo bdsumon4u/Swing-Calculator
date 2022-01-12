@@ -1,6 +1,7 @@
 package com.java.calculator.app.models;
 
 public class MainModel {
+    private boolean isError;
     private String operator;
     private String result;
     private String meta;
@@ -41,8 +42,55 @@ public class MainModel {
         this.result = "0";
     }
 
+    public void calculate() {
+        if (isError) {
+            return;
+        }
+
+        if (meta == null) {
+            return;
+        }
+
+        try {
+            String operand = meta.substring(0, meta.length() - 1);
+            meta += result;
+            doTheMath(Double.parseDouble(operand));
+        } catch (NumberFormatException | ArithmeticException e) {
+            enterErrorMode();
+        }
+    }
+
+    private void doTheMath(double operand) {
+        double answer = 0.0;
+        double display = Double.parseDouble(result);
+
+        switch (operator) {
+            case "+":
+                answer = operand + display;
+                break;
+            case "-":
+                answer = operand - display;
+                break;
+            case "×":
+                answer = operand * display;
+                break;
+            case "÷":
+                answer = operand / display;
+                break;
+        }
+
+        result = String.valueOf(answer);
+    }
+
     private void reset() {
         result = "0";
         operator = null;
+        isError = false;
+    }
+
+    private void enterErrorMode() {
+        result = "Error!";
+        operator = null;
+        isError = true;
     }
 }

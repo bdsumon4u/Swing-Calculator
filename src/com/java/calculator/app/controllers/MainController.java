@@ -26,6 +26,8 @@ public class MainController {
         view.getSubButton().addActionListener(e -> pressOperator('-'));
         view.getMulButton().addActionListener(e -> pressOperator('×'));
         view.getDivButton().addActionListener(e -> pressOperator('÷'));
+
+        view.getEqualButton().addActionListener(e -> pressEqualButton());
     }
 
     protected void pressNum(int num) {
@@ -35,6 +37,11 @@ public class MainController {
 
     protected void pressOperator(char op) {
         model.setOperator(op);
+        updateDisplay();
+    }
+
+    protected void pressEqualButton() {
+        model.calculate();
         updateDisplay();
     }
 

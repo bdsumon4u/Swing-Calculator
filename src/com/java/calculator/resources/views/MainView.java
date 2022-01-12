@@ -67,6 +67,10 @@ final public class MainView extends JFrame {
         return divButton;
     }
 
+    public JButton getEqualButton() {
+        return eButton;
+    }
+
     public void setDisplay(String display) {
         this.display.setText(display);
     }

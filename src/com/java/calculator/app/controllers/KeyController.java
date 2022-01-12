@@ -37,6 +37,9 @@ public class KeyController implements KeyListener {
             case '÷':
                 controller.pressOperator('÷');
                 break;
+            case '=':
+                controller.pressEqualButton();
+                break;
         }
     }
 
