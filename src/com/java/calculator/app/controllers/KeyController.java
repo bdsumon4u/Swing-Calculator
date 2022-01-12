@@ -25,6 +25,18 @@ public class KeyController implements KeyListener {
             case '9':
                 controller.pressNum((int)e.getKeyChar() - (int)'0');
                 break;
+            case '+':
+                controller.pressOperator('+');
+                break;
+            case '-':
+                controller.pressOperator('-');
+                break;
+            case '×':
+                controller.pressOperator('×');
+                break;
+            case '÷':
+                controller.pressOperator('÷');
+                break;
         }
     }
 

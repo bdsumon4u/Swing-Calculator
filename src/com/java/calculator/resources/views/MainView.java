@@ -54,7 +54,23 @@ final public class MainView extends JFrame {
         );
     }
 
+    public JButton getAddButton() {
+        return addButton;
+    }
+    public JButton getSubButton() {
+        return subButton;
+    }
+    public JButton getMulButton() {
+        return mulButton;
+    }
+    public JButton getDivButton() {
+        return divButton;
+    }
+
     public void setDisplay(String display) {
         this.display.setText(display);
+    }
+    public void setDisplayMeta(String meta) {
+        this.meta.setText(meta);
     }
 }

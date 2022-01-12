@@ -21,6 +21,11 @@ public class MainController {
             final int buttonID = i;
             view.numButtons().get(i).addActionListener(e -> pressNum(buttonID));
         }
+
+        view.getAddButton().addActionListener(e -> pressOperator('+'));
+        view.getSubButton().addActionListener(e -> pressOperator('-'));
+        view.getMulButton().addActionListener(e -> pressOperator('×'));
+        view.getDivButton().addActionListener(e -> pressOperator('÷'));
     }
 
     protected void pressNum(int num) {
@@ -28,7 +33,13 @@ public class MainController {
         updateDisplay();
     }
 
+    protected void pressOperator(char op) {
+        model.setOperator(op);
+        updateDisplay();
+    }
+
     private void updateDisplay() {
         view.setDisplay(model.getResult());
+        view.setDisplayMeta(model.getMeta());
     }
 }

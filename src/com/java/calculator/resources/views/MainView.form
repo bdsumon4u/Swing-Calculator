@@ -268,7 +268,7 @@
             </constraints>
             <properties>
               <focusable value="false"/>
-              <text value="*"/>
+              <text value="×"/>
             </properties>
           </component>
           <vspacer id="5f58b">
@@ -350,7 +350,7 @@
             </constraints>
             <properties>
               <focusable value="false"/>
-              <text value="%"/>
+              <text value="÷"/>
             </properties>
           </component>
           <vspacer id="d7405">
