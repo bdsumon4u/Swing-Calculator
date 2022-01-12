@@ -12,6 +12,7 @@ public class MainController {
         this.view = view;
 
         bindButtons();
+        updateDisplay();
         view.addKeyListener(new KeyController(this));
     }
 
@@ -23,6 +24,11 @@ public class MainController {
     }
 
     protected void pressNum(int num) {
-        System.out.println("Pressed " + num);
+        model.insertNum(num);
+        updateDisplay();
+    }
+
+    private void updateDisplay() {
+        view.setDisplay(model.getResult());
     }
 }

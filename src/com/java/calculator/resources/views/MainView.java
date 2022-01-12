@@ -53,4 +53,8 @@ final public class MainView extends JFrame {
                 a5Button, a6Button, a7Button, a8Button, a9Button
         );
     }
+
+    public void setDisplay(String display) {
+        this.display.setText(display);
+    }
 }
