@@ -73,6 +73,9 @@ final public class MainView extends JFrame {
     public JButton getBackButton() {
         return dButton;
     }
+    public JButton getDeleteButton() {
+        return cButton;
+    }
 
     public void setDisplay(String display) {
         this.display.setText(display);

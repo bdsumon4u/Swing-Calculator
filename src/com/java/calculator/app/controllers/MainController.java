@@ -29,6 +29,7 @@ public class MainController {
 
         view.getEqualButton().addActionListener(e -> pressEqualButton());
         view.getBackButton().addActionListener(e -> pressBackButton());
+        view.getDeleteButton().addActionListener(e -> pressDeleteButton());
     }
 
     protected void pressNum(int num) {
@@ -48,6 +49,11 @@ public class MainController {
 
     protected void pressBackButton() {
         model.backspace();
+        updateDisplay();
+    }
+
+    protected void pressDeleteButton() {
+        model.clear();
         updateDisplay();
     }
 

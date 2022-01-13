@@ -116,6 +116,14 @@ public class MainModel {
         }
     }
 
+    public void clear() {
+        if (!this.result.equals("0")) {
+            this.result = "0";
+        } else {
+            this.meta = null;
+        }
+    }
+
     private void reset() {
         result = "0";
         operator = null;

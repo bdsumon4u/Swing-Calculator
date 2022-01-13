@@ -54,6 +54,9 @@ public class KeyController implements KeyListener {
             case KeyEvent.VK_BACK_SPACE:
                 controller.pressBackButton();
                 break;
+            case KeyEvent.VK_DELETE:
+                controller.pressDeleteButton();
+                break;
         }
     }
 }
