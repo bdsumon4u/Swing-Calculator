@@ -70,6 +70,9 @@ final public class MainView extends JFrame {
     public JButton getEqualButton() {
         return eButton;
     }
+    public JButton getBackButton() {
+        return dButton;
+    }
 
     public void setDisplay(String display) {
         this.display.setText(display);

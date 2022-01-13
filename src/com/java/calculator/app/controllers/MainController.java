@@ -28,6 +28,7 @@ public class MainController {
         view.getDivButton().addActionListener(e -> pressOperator('÷'));
 
         view.getEqualButton().addActionListener(e -> pressEqualButton());
+        view.getBackButton().addActionListener(e -> pressBackButton());
     }
 
     protected void pressNum(int num) {
@@ -42,6 +43,11 @@ public class MainController {
 
     protected void pressEqualButton() {
         model.calculate();
+        updateDisplay();
+    }
+
+    protected void pressBackButton() {
+        model.backspace();
         updateDisplay();
     }
 

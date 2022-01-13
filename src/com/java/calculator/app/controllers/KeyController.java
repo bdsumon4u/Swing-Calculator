@@ -50,6 +50,10 @@ public class KeyController implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-
+        switch (e.getKeyCode()) {
+            case KeyEvent.VK_BACK_SPACE:
+                controller.pressBackButton();
+                break;
+        }
     }
 }

@@ -107,6 +107,15 @@ public class MainModel {
         result = String.valueOf(answer);
     }
 
+    public void backspace() {
+        if (!result.isEmpty()) {
+            result = result.substring(0, result.length() - 1);
+        }
+        if (result.isEmpty()) {
+            result = "0";
+        }
+    }
+
     private void reset() {
         result = "0";
         operator = null;
