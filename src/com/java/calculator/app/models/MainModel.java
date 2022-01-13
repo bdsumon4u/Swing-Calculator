@@ -37,9 +37,34 @@ public class MainModel {
     }
 
     public void setOperator(char op) {
+        if (changedSign(op)) {
+            return;
+        }
+
+        calculate();
         this.operator = String.valueOf(op);
         meta = result + operator;
         this.result = "0";
+    }
+
+    private boolean changedSign(char op) {
+        if (this.meta != null && result.equals("0")) {
+            meta = meta.replace(meta.charAt(meta.length() - 1), op);
+            return false;
+        }
+
+        if (this.meta == null && op == '-') {
+            if (result.equals("0")) {
+                result = "-0";
+                return true;
+            }
+            if (result.equals("-0")) {
+                result = "0";
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void calculate() {

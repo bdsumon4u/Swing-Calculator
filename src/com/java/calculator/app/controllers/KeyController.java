@@ -31,10 +31,10 @@ public class KeyController implements KeyListener {
             case '-':
                 controller.pressOperator('-');
                 break;
-            case '×':
+            case '*':
                 controller.pressOperator('×');
                 break;
-            case '÷':
+            case '/':
                 controller.pressOperator('÷');
                 break;
             case '=':
