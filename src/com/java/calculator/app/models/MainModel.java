@@ -36,6 +36,12 @@ public class MainModel {
         result += num;
     }
 
+    public void insertDot() {
+        if (!this.result.contains(".")) {
+            this.result += ".";
+        }
+    }
+
     public void setOperator(char op) {
         if (changedSign(op)) {
             return;

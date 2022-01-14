@@ -30,6 +30,7 @@ public class MainController {
         view.getEqualButton().addActionListener(e -> pressEqualButton());
         view.getBackButton().addActionListener(e -> pressBackButton());
         view.getDeleteButton().addActionListener(e -> pressDeleteButton());
+        view.getDotButton().addActionListener(e -> pressDotButton());
     }
 
     protected void pressNum(int num) {
@@ -54,6 +55,11 @@ public class MainController {
 
     protected void pressDeleteButton() {
         model.clear();
+        updateDisplay();
+    }
+
+    protected void pressDotButton() {
+        model.insertDot();
         updateDisplay();
     }
 

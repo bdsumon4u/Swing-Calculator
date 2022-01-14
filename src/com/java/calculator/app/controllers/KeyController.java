@@ -40,6 +40,9 @@ public class KeyController implements KeyListener {
             case '=':
                 controller.pressEqualButton();
                 break;
+            case '.':
+                controller.pressDotButton();
+                break;
         }
     }
 

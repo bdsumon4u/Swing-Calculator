@@ -76,6 +76,9 @@ final public class MainView extends JFrame {
     public JButton getDeleteButton() {
         return cButton;
     }
+    public JButton getDotButton() {
+        return radixPoint;
+    }
 
     public void setDisplay(String display) {
         this.display.setText(display);
