@@ -79,6 +79,9 @@ final public class MainView extends JFrame {
     public JButton getDotButton() {
         return radixPoint;
     }
+    public JRadioButton getOffButton() {
+        return OFFRadioButton;
+    }
 
     public void setDisplay(String display) {
         this.display.setText(display);

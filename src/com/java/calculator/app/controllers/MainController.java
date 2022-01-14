@@ -31,6 +31,8 @@ public class MainController {
         view.getBackButton().addActionListener(e -> pressBackButton());
         view.getDeleteButton().addActionListener(e -> pressDeleteButton());
         view.getDotButton().addActionListener(e -> pressDotButton());
+
+        view.getOffButton().addActionListener(e -> System.exit(0));
     }
 
     protected void pressNum(int num) {
