@@ -60,6 +60,9 @@ public class KeyController implements KeyListener {
             case KeyEvent.VK_DELETE:
                 controller.pressDeleteButton();
                 break;
+            case KeyEvent.VK_ENTER:
+                controller.pressEqualButton();
+                break;
         }
     }
 }
